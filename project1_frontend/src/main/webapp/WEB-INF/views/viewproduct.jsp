@@ -9,12 +9,15 @@
 </head>
 <body>
 <h4>Product Details</h4><br>
+<img src='<c:url value='/resources/images/${product.id }.png'></c:url>' height="70" width="70" alt="Image not Available ">
+
 <pre>
 <b>Product Name:</b>${product.productname}<br>
 <b>Product Description:</b>${product.productDescription}<br>
 <b>Price:</b>${product.price }<br>
 <b>Quantity:</b>${product.quantity }<br>
 <b>Category:</b>${product.category.categoryname}<br>
+
 <a class="btn btn-info btn-lg">Shopping Cart
 <span class="glyphicon glyphicon-shopping-cart"></span></a>
 </pre>

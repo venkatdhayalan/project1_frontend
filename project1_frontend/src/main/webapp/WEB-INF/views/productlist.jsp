@@ -13,6 +13,7 @@
 <table class ="table table-striped">
       <thead>
 		<tr>
+			<th>Image</th>
 			<th>ProductName</th>
 			<th>Price</th>
 			<th>Category</th>
@@ -23,6 +24,7 @@
       <tbody>
 		<c:forEach items="${productsAttr }" var="p">
 		<tr>
+			<td><img src='<c:url value='/resources/images/${p.id }.png'></c:url>' height="40" width="50" alt="Image not Available"></td>
 			<td>${p.productname }</td>
 			<td>${p.price }</td>
 			<td>${p.category.categoryname}</td>

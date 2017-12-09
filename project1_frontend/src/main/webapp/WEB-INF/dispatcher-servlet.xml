@@ -23,6 +23,11 @@
        <property name="prefix" value="/WEB-INF/views/"></property>
        <property name="suffix" value=".jsp"></property>
        </bean>
+       
+       <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="10240000"></property>
+		</bean>
+		
        <!--  /resources/images/ast.jpg -->
        <!--  /WEB-INF/resources/images/ast.jpg -->
        <mvc:resources location="/WEB-INF/resources/" mapping="/resources/**"></mvc:resources>

@@ -5,6 +5,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.Transient;
+import javax.validation.constraints.Min;
+
+import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.web.multipart.MultipartFile;
 
 
 
@@ -14,12 +19,30 @@ public class Product {
 	@GeneratedValue(strategy=GenerationType.AUTO)//Automatically generate value for Id using sequence
 	
 	private int id;
+	
+	@NotEmpty(message="Product name is mandatory")
 	private String productname;
+	
+	@NotEmpty(message="Product description cannot be blank")
 	private String productDescription;
+	
 	private int quantity;
+	@Min(value=10,message="Minimum price is 10")
+	
 	private double price;
+	
 	@ManyToOne
 	private Category category;
+	@Transient
+	private MultipartFile image; //image will not get persisted in the table
+	
+	
+	public MultipartFile getImage() {
+		return image;
+	}
+	public void setImage(MultipartFile image) {
+		this.image = image;
+	}
 	public Category getCategory() {
 		return category;
 	}
