@@ -30,12 +30,17 @@
 			<td>${p.category.categoryname}</td>
 			
 			<c:url value="/all/viewproduct/${p.id }" var="viewUrl"></c:url>
+			
 			<c:url value="/admin/deleteproduct/${p.id }" var="deleteUrl"></c:url>
 			<c:url value="/admin/getproductform?id=${p.id }" var="editUrl"></c:url>
+			
 			<td>
+			
 			<a href="${viewUrl }"><span class="glyphicon glyphicon-info-sign"></span></a>
+			<security:authorize access="hasRole('ROLE_ADMIN')">
 			<a href="${deleteUrl }"><span class="glyphicon glyphicon-trash"></span></a>
 			<a href="${editUrl }"><span class="glyphicon glyphicon-pencil"></span></a>
+			</security:authorize>
 			</td>
 		</tr>
         </c:forEach>
