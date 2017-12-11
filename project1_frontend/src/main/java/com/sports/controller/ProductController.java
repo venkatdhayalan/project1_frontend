@@ -110,8 +110,18 @@ public class ProductController {
     	
     	
     	return "redirect:/all/getallproducts";
-    	
+	}
 	
+		@RequestMapping("/all/product/searchbycategory")
+    	public String selectByCategory(@RequestParam String searchCondition,Model model) {
+    		model.addAttribute("productsAttr", productService.getAllCategories());
+    		if(searchCondition.equals("All"))
+    			model.addAttribute("searchCondition", "");
+    		else
+    			model.addAttribute("searchCondition", searchCondition);
+    		return "productList";
+    	
+    		
 			
 			
 			

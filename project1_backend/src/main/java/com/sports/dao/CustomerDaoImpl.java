@@ -59,5 +59,10 @@ public class CustomerDaoImpl implements CustomerDao {
 		else
 			return true;
 	}
+	public User getUser(String username) {
+		Session session=sessionFactory.getCurrentSession();
+		User user=(User)session.get(User.class,username);
+		return user;
+	}
 
 }

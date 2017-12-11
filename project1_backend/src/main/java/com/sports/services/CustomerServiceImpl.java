@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import com.sports.dao.CustomerDao;
 import com.sports.model.Customer;
+import com.sports.model.User;
 
 @Service
 public class CustomerServiceImpl implements CustomerService {
@@ -22,6 +23,9 @@ public class CustomerServiceImpl implements CustomerService {
 	public boolean isUsernameValid(String username) {
 		// TODO Auto-generated method stub
 		return customerDao.isUsernameValid(username);
+	}
+	public User getUser(String username) {
+		return customerDao.getUser(username);
 	}
 
 }

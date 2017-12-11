@@ -6,6 +6,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+<script>
+	$(document).ready(function() {
+		var searchCondition = '${searchCondition}';
+		$('.table').DataTable({
+			"lengthMenu" : [ [  5, 7, -1 ], [  5, 7, "All" ] ],
+			"oSearch" : {
+				"sSearch" : searchCondition
+			}
+		})
+	});
+</script>
 </head>
 <body>
 <div class="container">

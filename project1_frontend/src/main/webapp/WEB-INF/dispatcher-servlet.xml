@@ -10,7 +10,19 @@
        http://www.springframework.org/schema/context/spring-context.xsd">
        
        <!-- To enable spring web mvc  -->
-       <mvc:annotation-driven></mvc:annotation-driven>
+       <mvc:annotation-driven>
+       
+       <mvc:argument-resolvers>
+       <bean class="org.springframework.security.web.bind.support.AuthenticationPrincipalArgumentResolver">
+       
+       </bean>
+       
+       
+       </mvc:argument-resolvers>
+       
+       
+       
+       </mvc:annotation-driven>
        
        <!--  to scan all the classes annotated with @Controller, @Service, @Repository, @Autowired -->
        <!--  similar @Component-scan(basePackages="com.niit" -->

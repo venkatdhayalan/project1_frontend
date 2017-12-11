@@ -10,8 +10,9 @@ import org.hibernate.validator.constraints.NotEmpty;
 public class User {
 	
 	@Id
+	@NotEmpty(message="Username is madatory")
 	private String username;
-	@NotEmpty
+	@NotEmpty(message="Password cannot be blank")
 	private String password;
 	private boolean enabled;
 	@OneToOne(mappedBy="user",cascade=CascadeType.ALL)

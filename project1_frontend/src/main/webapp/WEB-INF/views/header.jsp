@@ -10,7 +10,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>sports</title>
+
 
 
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -18,6 +18,17 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
  <link rel="stylesheet" href="<c:url value='/resources/css/login.css'></c:url>">
+ 
+  <!-- Angular Js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+      
+       <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+
+    <link href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css" rel="stylesheet">
+ 
+ <title>sports</title>
 </head>
 <body>
 <nav class="navbar navbar-default">
@@ -47,6 +58,12 @@
 			
 			<c:url value="/all/getallproducts" var="productsUrl"></c:url>
 			<li><a href="${productsUrl }">Browse all products</a>
+			
+			
+			
+			 <security:authorize access="hasRole('ROLE_USER')">
+			<li><a href="<c:url value='/cart/getcart'></c:url>">cart</a></li>
+			</security:authorize>
 			
 			<c:if test="${pageContext.request.userPrincipal.name==null }">
 			<li><a href="<c:url value='/login'></c:url>">Sign In</a></li>
