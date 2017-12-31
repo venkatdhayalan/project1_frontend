@@ -11,18 +11,10 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<footer>
-
-        
-     
-    <li class="glyphicon glyphicon-map-marker" style="width:30px"></li>20/10,Nugambakkam,Chennai-100 <br>
-   <li class="glyphicon glyphicon-phone" style="width:30px"></li> Phone: +044 2556 1111<br>
-   <li class="glyphicon glyphicon-envelope" style="width:30px"> </li> Email: travel@mail.com<br> 
-    
-    
-   
-			</footer>
-
-
+<footer>     
+<li class="glyphicon glyphicon-map-marker" style="width:30px"></li>20/10,Nugambakkam,Chennai-100 <br>
+<li class="glyphicon glyphicon-phone" style="width:30px"></li> Phone: +044 2556 1111<br>
+<li class="glyphicon glyphicon-envelope" style="width:30px"> </li> Email: sports@mail.com<br> 
+</footer>
 </body>
 </html>

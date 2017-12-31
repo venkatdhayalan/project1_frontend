@@ -49,7 +49,7 @@
 		<c:url value="/home" var="homeUrl"></c:url>
 			<li class="active"><a href="${homeUrl }">Home<span class="sr-only">You are in home page link</span></a></li>
 			<c:url value="/aboutus" var="aboutUsUrl"></c:url>
-			<li><a href="${aboutUsUrl }">AboutUs</a><li>
+			<li><a href="${aboutUsUrl }">AboutUs</a>
 			
 			<c:url value="/admin/getproductform?id=0" var="productForm"></c:url>
 			<security:authorize access="hasRole('ROLE_ADMIN')">
@@ -58,7 +58,7 @@
 			
 			<c:url value="/all/getallproducts" var="productsUrl"></c:url>
 			<li><a href="${productsUrl }">Browse all products</a>
-			
+		
 			
 			
 			 <security:authorize access="hasRole('ROLE_USER')">

@@ -21,20 +21,32 @@ public class ProductDaoImplTest1 {
 	AnnotationConfigApplicationContext context=new AnnotationConfigApplicationContext(DBConfiguration.class,ProductDaoImpl.class);
 	@Test
 	public void testGetAllProducts() {
-		ProductDao productDao=(ProductDao)context.getBean("productDaoImpl");
-		List<Product>products = productDao.getAllProducts();
-		assertTrue(products.size()>0);
+	
+			ProductDao productDao=(ProductDao)context.getBean("productDaoImpl");
+			List<Product>products = productDao.getAllProducts();
+			assertTrue(products.size()>0);
 		
 	}
 
 	@Test
 	public void testGetProduct() {
 		
+
+		ProductDao productDao=(ProductDao)context.getBean("productDaoImpl");
+		Product product=productDao.getProduct(1);
+		assertNotNull(product);
+		Product product1=productDao.getProduct(405);
+		assertNull(product1);
+		
 	}
 
 	@Test
 	public void testDeleteProduct() {
 		
+		ProductDao productDao=(ProductDao)context.getBean("productDaoImpl");
+		productDao.deleteProduct(11);
+		Product product=productDao.getProduct(3);
+		assertNull(product);
 		
 		
 		

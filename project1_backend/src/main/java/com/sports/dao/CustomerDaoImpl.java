@@ -42,7 +42,7 @@ public class CustomerDaoImpl implements CustomerDao {
 	}
 	public boolean isEmailValid(String email) {
 		Session session=sessionFactory.getCurrentSession();
-		Query query=session.createQuery("from customer where email=? and username=?");
+		Query query=session.createQuery("from Customer where email=?");
 		query.setString(0, email);
 		Customer customer=(Customer)query.uniqueResult();
 		if(customer!=null)

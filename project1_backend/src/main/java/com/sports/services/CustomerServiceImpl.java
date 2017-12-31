@@ -17,11 +17,9 @@ public class CustomerServiceImpl implements CustomerService {
 		
 	}
 	public boolean isEmailValid(String email) {
-		// TODO Auto-generated method stub
 		return customerDao.isEmailValid(email);
 	}
 	public boolean isUsernameValid(String username) {
-		// TODO Auto-generated method stub
 		return customerDao.isUsernameValid(username);
 	}
 	public User getUser(String username) {

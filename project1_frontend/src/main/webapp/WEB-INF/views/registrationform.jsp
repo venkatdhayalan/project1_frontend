@@ -51,7 +51,7 @@ Enter login credentials
 </div>
 
 <div class="boxed" style="border:1px solid">
-Enter Billing Address
+
 <div class="form-group">
 <form:label path="user.password">Password</form:label>
 <form:input path="user.password" type="password" class="form-control"></form:input>
@@ -59,6 +59,8 @@ Enter Billing Address
 </div>
 </div>
 
+
+Enter Billing Address
 <div class="form-group">
 <form:label path="billingaddress.apartmentnumber">Apartment Number</form:label>
 <form:input path="billingaddress.apartmentnumber"  class="form-control"></form:input>

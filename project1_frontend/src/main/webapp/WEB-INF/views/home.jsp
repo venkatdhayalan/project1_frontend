@@ -74,37 +74,38 @@
   <div class="col-md-4">
     <div class="thumbnail">
       <a href="">
-        <img src="resources/images/pic1.jpg" alt="Lights" style="width:30%">
-        <div class="caption">
+      <div class="caption">
           <p>Explore Sports</p>
         </div>
-      </a>
+        <img src="resources/images/pic1.jpg" alt="logo1" height="600px" width="600px">
+       </a>
     </div>
   </div>
   <div class="col-md-4">
     <div class="thumbnail">
       <a href="">
-        <img src="resources/images/pic2.jpg" alt="Nature" style="width:30%">
-        <div class="caption">
+      <div class="caption">
           <p>Upto 30% Discount</p>
         </div>
+        <img src="resources/images/pic2.jpg" alt="logo2" height="500px" width="500px">
+        
       </a>
     </div>
   </div>
   <div class="col-md-4">
     <div class="thumbnail">
       <a href="">
-        <img src="resources/images/pic3.jpg" alt="Fjords" style="width:30%">
-        <div class="caption">
+       <div class="caption">
           <p>Buy with Us</p>
         </div>
+        <img src="resources/images/pic3.jpg" alt="logo3" height="500px" width="500px" >
+       
       </a>
     </div>
   </div>
 </div>
          
-        
-        </center>
-        <%@ include file ="footer.jsp"%>
+</center>
+<%@ include file ="footer.jsp"%>
 </body>
 </html>
